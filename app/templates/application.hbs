@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember</h2>
+<article class="wrapper {{currentTheme}}">
+  <section class="component">
+    <h2 class="component__heading">Sass Color Schemes Demo Page</h2>
+    <ul class="component__list">
+      <li class="component__list-item"></li>
+      <li class="component__list-item"></li>
+      <li class="component__list-item"></li>
+      <li class="component__list-item"></li>
+    </ul>
+  </section>
+</article>
 
-{{outlet}}
+<!--
+Buttons to change theme
+-->
+<section class="controls">
+  <button class="controls" data-theme="default" {{action "changeTheme" "default"}}>Default</button>
+  <button class="controls" data-theme="banana" {{action "changeTheme" "banana"}}>Funny banana</button>
+</section>

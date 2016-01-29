@@ -1,0 +1,24 @@
+// Set a variable containing current brand
+$brand: 'bobs-burgers';
+
+@import 'header';
+@import 'hero';
+@import 'footer';
+
+.hero {
+  // First, styles that all brands
+  // have in common.
+  // (The "shared stuff")
+  font-size: 2em;
+  font-weight: bold;
+  border: 1px solid;
+
+  // Next, brand-specific styles.
+  // (The "themed stuff")
+  @if $brand == 'bobs-burgers' {
+    border-color: yellow;
+  }
+  @if $brand == 'paddys-pub' {
+    border-color: green;
+  }
+}
